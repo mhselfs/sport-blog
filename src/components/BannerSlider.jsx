@@ -69,7 +69,7 @@ const BannerSlider = () => {
             {/* Navigation */}
             <div className='flex justify-center sm:justify-end items-center mt-4 sm:mt-5 gap-2 sm:gap-4 md:gap-5 lg:gap-7 px-2 sm:px-4'>
                 <div
-                    className='bg-[#BAB8B8] w-[40px] sm:w-[50px] md:w-[60px] lg:w-[70px] h-[30px] sm:h-[40px] md:h-[45px] lg:h-[50px] flex justify-center items-center rounded-sm cursor-pointer'
+                    className='bg-[#262626] w-[40px] sm:w-[50px] md:w-[60px] lg:w-[70px] h-[30px] sm:h-[40px] md:h-[45px] lg:h-[50px] flex justify-center items-center rounded-sm cursor-pointer hover:bg-[#262626]/90 transition'
                     onClick={prevSlide}
                 >
                     <FaLongArrowAltLeft className='text-[#EBEEF3] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6' />
@@ -78,7 +78,7 @@ const BannerSlider = () => {
                     <p
                         key={index}
                         className={`text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl ${
-                            index === currentSlide ? 'text-[#EBEEF3] bg-[#262626]' : 'text-[#262626]/60'
+                            index === currentSlide ? 'text-[#EBEEF3] bg-[#262626] ' : 'text-[#262626]/60 '
                         } rounded-full w-[24px] h-[24px] sm:w-[30px] sm:h-[30px] md:w-[36px] md:h-[36px] flex justify-center items-center cursor-pointer`}
                         onClick={() => setCurrentSlide(index)}
                     >
@@ -86,7 +86,7 @@ const BannerSlider = () => {
                     </p>
                 ))}
                 <div
-                    className='bg-[#262626] w-[40px] sm:w-[50px] md:w-[60px] lg:w-[70px] h-[30px] sm:h-[40px] md:h-[45px] lg:h-[50px] flex justify-center items-center rounded-sm cursor-pointer'
+                    className='bg-[#262626] w-[40px] sm:w-[50px] md:w-[60px] lg:w-[70px] h-[30px] sm:h-[40px] md:h-[45px] lg:h-[50px] flex justify-center items-center rounded-sm cursor-pointer hover:bg-[#262626]/90 transition'
                     onClick={nextSlide}
                 >
                     <FaLongArrowAltRight className='text-[#EBEEF3] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6' />

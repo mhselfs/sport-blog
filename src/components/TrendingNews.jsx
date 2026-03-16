@@ -13,10 +13,9 @@ const TrendingNews = () => {
 
     return (
         <div className='flex flex-col lg:flex-row justify-center p-4 md:p-8 lg:m-8 xl:m-16 2xl:m-32'>
-            {/* Left Section - IDs 3 to 5 */}
             <div className='lg:mx-5 mb-8 lg:mb-0'>
-                <h4 className='text-[#262626] text-xl md:text-2xl lg:text-[28px] leading-[1.2] md:leading-[1.3] lg:leading-[38px] mb-4 lg:mb-6'>
-                    Trending News
+                <h4 className='text-[#262626] text-xl md:text-2xl lg:text-4xl font-bold leading-[1.2] md:leading-[1.3] lg:leading-[38px] mb-4 lg:mb-6 text-center '>
+                    خبرهای داغ
                 </h4>
 
                 {newsData

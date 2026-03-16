@@ -14,8 +14,8 @@ const Header = () => {
 
                 <ul className='hidden lg:flex gap-4'>
                     <li>Home</li>
-                    <li className='text-[#2626269d]'>Category</li>
-                    <li className='text-[#2626269d]'>Trending News</li>
+                    <li className='text-[#2626269d]'>دسته‌بندی</li>
+                    <li className='text-[#2626269d]'>خبرهای داغ</li>
                     <li className='text-[#2626269d]'>Recent News</li>
                     <li className='text-[#2626269d]'>Clubs Ranking</li>
                     <li className='text-[#2626269d]'>Sports Article</li>
@@ -38,7 +38,7 @@ const Header = () => {
                 <ul className='lg:hidden flex flex-col gap-4 px-6 py-4 bg-white border-t border-gray-200'>
                     <li>Home</li>
                     <li id="Category" className='text-[#2626269d]'>دسته‌بندی</li>
-                    <li id='Trending-News' className='text-[#2626269d]'>Trending News</li>
+                    <li id='Trending-News' className='text-[#2626269d]'>خبرهای داغ</li>
                     <li id='Club-Ranking' className='text-[#2626269d]'>Clubs Ranking</li>
                     <li id='' className='text-[#2626269d]'>Sports Article</li>
                 </ul>

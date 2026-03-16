@@ -49,14 +49,14 @@ const Article = () => {
                     </div>
                 ))}
             </div>
-            <div className='flex justify-center md:justify-start mt-6 sm:mt-8'>
+            {/* <div className='flex justify-center md:justify-start mt-6 sm:mt-8'>
                 <div className='bg-[#262626] w-[50px] sm:w-[60px] md:w-[70px] h-[40px] sm:h-[45px] md:h-[50px] flex justify-center items-center rounded-sm cursor-pointer hover:bg-[#262626]/90 transition'>
                     <FaLongArrowAltLeft className='text-[#EBEEF3] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6' />
                 </div>
                 <div className='bg-[#262626] w-[50px] sm:w-[60px] md:w-[70px] h-[40px] sm:h-[45px] md:h-[50px] flex justify-center items-center rounded-sm cursor-pointer mx-3 sm:mx-4 md:mx-5 hover:bg-[#262626]/90 transition'>
                     <FaLongArrowAltRight className='text-[#EBEEF3] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6' />
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

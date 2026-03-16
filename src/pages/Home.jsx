@@ -15,7 +15,8 @@ const Home = () => {
             <Category />
             <TrendingNews />
             <BannerSlider />
-            <ClubRanking />
+            {/* API Stopped */}
+            {/* <ClubRanking /> */}
             <Article />
             <NewsLetter />
         

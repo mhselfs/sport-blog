@@ -8,11 +8,11 @@ import arrow from "../assets/arrow.png";
 
 const NewsLetter = () => {
     return (
-        <div className='mx-auto my-8 md:my-16 lg:my-32 max-h-auto lg:max-h-[385px] w-full max-w-[1168px] bg-[#262626]/10'>
+        <div className='max-h-auto lg:max-h-[385px] w-full max-w-screen bg-[#262626]/10'>
             {/* Desktop Version (exactly as original) */}
-            <div className='hidden lg:flex gap-5'>
-                <div className='m-20'>
-                    <img className='w-[614px] h-[120px] my-10 object-contain' src={newsText} alt="Newsletter" />
+            <div className='hidden lg:flex gap-5 justify-around'>
+                <div className='mx-20 mt-8'>
+                    <img className='h-[120px] my-10 object-contain' src={newsText} alt="Newsletter" />
                     <div className="relative">
                         <input
                             placeholder="example@gmail.com"
@@ -27,13 +27,13 @@ const NewsLetter = () => {
                     </div>
                 </div>
                 <div>
-                    <img className='w-[520px] h-[385px]' src={newsbg} alt="Newsletter background" />
+                    <img className='w-[520px] h-[385]' src={newsbg} alt="Newsletter background" />
                 </div>
             </div>
             
             {/* Mobile Version */}
-            <div className='lg:hidden flex flex-col p-6'>
-                <img className='w-full max-w-[614px] h-auto my-6 object-contain' src={newsText} alt="Newsletter" />
+            <div className='lg:hidden flex flex-col px-6'>
+                <span>با خبرنامه ما همراه باشید</span>
                 
                 <div className="relative mb-6">
                     <input
@@ -48,20 +48,13 @@ const NewsLetter = () => {
                     />
                 </div>
                 
-                <img className='w-full h-auto mb-6 object-cover rounded-lg' src={newsbg} alt="Newsletter background" />
-                
-                <div className='flex text-white gap-4'>
-                    <img src={facebook} className='bg-[#262626] w-10 h-10 object-contain p-2 rounded-md' alt="Facebook" />
-                    <img src={instagram} className='bg-[#262626] w-10 h-10 object-contain p-2 rounded-md' alt="Instagram" />
-                    <img src={twitter} className='bg-[#262626] w-10 h-10 object-contain p-2 rounded-md' alt="Twitter" />
-                </div>
+                <img className='w-full h-auto object-cover rounded-lg' src={newsbg} alt="Newsletter background" />
             </div>
 
             {/* Social Icons (Desktop) */}
-            <div className='hidden lg:flex text-white gap-4 my-5'>
-                <img src={facebook} className='bg-[#262626] w-[44px] h-[44px] object-contain p-2 rounded-md' alt="Facebook" />
-                <img src={instagram} className='bg-[#262626] w-[44px] h-[44px] object-contain p-2 rounded-md' alt="Instagram" />
-                <img src={twitter} className='bg-[#262626] w-[44px] h-[44px] object-contain p-2 rounded-md' alt="Twitter" />
+            <div className='flex text-white gap-4 w-screen bg-[#262626] justify-center'>
+                <img src={facebook} className='bg-[#262626] h-10 lg:w-10 object-contain p-2 rounded-md' alt="Facebook" />
+                <img src={instagram} className='bg-[#262626] h-10 lg:w-10 object-contain p-2 rounded-md' alt="Instagram" />
             </div>
         </div>
     );

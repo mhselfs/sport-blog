@@ -8,7 +8,7 @@ import arrow from "../assets/arrow.png";
 
 const NewsLetter = () => {
     return (
-        <div className='max-h-auto lg:max-h-[385px] w-full max-w-screen bg-[#262626]/10'>
+        <div id='NewsLetter' className='max-h-auto lg:max-h-[385px] w-full max-w-screen bg-[#262626]/10'>
             {/* Desktop Version (exactly as original) */}
             <div className='hidden lg:flex gap-5 justify-around'>
                 <div className='mx-20 mt-8'>

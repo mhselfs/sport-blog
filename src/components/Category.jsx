@@ -7,7 +7,7 @@ import catImg4 from "../assets/category-4.png";
 
 const Category = () => {
     return (
-        <div className='mx-32 mt-72 md:mx-4 md:mt-32'>
+        <div id='category' className='mx-32 mt-72 md:mx-4 md:mt-32'>
             <h4 className='ml-[-100px] mb-2 text-3xl leading-[38px] md:ml-22 text-center font-bold'>دسته‌بندی</h4>
             <div className='flex flex-col lg:flex-row justify-center items-center gap-7 md:gap-4'>
                 <div className='md:flex md:flex-col md:items-center'>

@@ -32,9 +32,7 @@ const NewsLetter = () => {
             </div>
             
             {/* Mobile Version */}
-            <div className='lg:hidden flex flex-col px-6'>
-                <span>با خبرنامه ما همراه باشید</span>
-                
+            <div className='lg:hidden flex flex-col px-6 pt-8'>                
                 <div className="relative mb-6">
                     <input
                         placeholder="example@gmail.com"

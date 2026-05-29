@@ -23,7 +23,7 @@ const Hero = () => {
                 <p className='text-[#262626] mb-2 max-w-xs'>
                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. 
                 </p>
-                <button className='w-[285px] h-[62px] mt-2 text-white bg-[#262626] px-2 py-2 rounded
+                <button className='w-[285px] h-[62px] mt-2 text-white bg-[#262626] px-2 py-2 rounded hover:transition-opacity hover:cursor-pointer
                 '>به خواندن ادامه دهید</button>
             </div>
 

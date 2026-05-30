@@ -3,25 +3,37 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios'
 import PostCart from './PostCart';
+import NewsModal from './NewsModal';
 import muckData from '../mouck.json'
 const Article = () => {
+    const [showModal, setShowModal] = useState(false)
+    const [selectedArticle, setSelectedArticle] = useState(null)
     // const [news, setNews] = useState([])
 
     
-    // useEffect(()=>{
-    //     const fetchNews = async () => {
-    //         try {
-    //             const res = await axios.get("https://api.widgetify.ir/news/rss?url=DEFAULT&sourceName=DEFAULT");                
-    //             const fetchedNews = res.data;
-    //             const filteredMuck = fetchedNews.slice(5, 8)
-    //             setNews(filteredMuck);
-    //         } catch (err) {
-    //             console.error('Fetch error:', err);
-    //         }
-    //     };
-    //     fetchNews();
-    // },[])
+        // useEffect(()=>{
+        //     const fetchNews = async () => {
+        //         try {
+        //             const res = await axios.get("https://api.widgetify.ir/news/rss?url=DEFAULT&sourceName=DEFAULT");                
+        //             const fetchedNews = res.data;
+        //             const filteredMuck = fetchedNews.slice(5, 8)
+        //             setNews(filteredMuck);
+        //         } catch (err) {
+        //             console.error('Fetch error:', err);
+        //         }
+        //     };
+        //     fetchNews();
+        // },[])
     const newsMuckSlice = muckData.slice(3, 6)
+    const handelClick = (e, category) => {
+        e.preventDefault()
+        setSelectCategory(category)
+    }
+
+    const handelArticle = (article) => {
+        setSelectedArticle(article)
+        setShowModal(true)
+    }
 
     return (
         <div id='article' className='mx-4 sm:mx-8 md:mx-16 lg:mx-24 xl:mx-32 my-8 sm:my-12 md:my-16 lg:my-20 xl:my-32'>
@@ -30,25 +42,24 @@ const Article = () => {
                 {newsMuckSlice.map(news => (
                     <div dir='rtl' key={news.title} className='w-full md:w-1/3 mb-6 md:mb-0'>
                         <div className='relative'>
-                            <Link to={`/blog/${news.title}`}>
-                                <img
-                                    src={news.image_url}
-                                    className='w-full h-[180px] sm:h-[200px] md:h-[220px] lg:h-[248px] object-cover rounded-lg'
-                                    alt={news.title}
-                                />
-                            </Link>
+                            <img
+                                onClick={() => { return handelArticle(news) }}
+                                src={news.image_url}
+                                className='w-full h-[180px] sm:h-[200px] md:h-[220px] lg:h-[248px] object-cover rounded-lg'
+                                alt={news.title}
+                            />
                         </div>
 
                         <div className='my-3 sm:my-4'>
                             <div className='flex items-center gap-3 sm:gap-4 my-3 sm:my-4'>
-                                <a href={news.source.url} className='leading-[1.2] sm:leading-[22px] text-xs sm:text-sm text-[#3E3232]'>
+                                <a href={news.source.url} className='leading-[1.2] sm:leading-[22px] text-xs sm:text-sm text-[#3E3232] cursor-pointer'>
                                     {news.source.name}
                                 </a>
                             </div>
 
                             <div className='max-w-full my-3 sm:my-4'>
                                 <PostCart dateString={news.publishedAt} />
-                                <h5 className='text-base sm:text-lg md:text-xl text-[#262626] my-2 sm:my-3 md:my-4'>
+                                <h5 className='text-base sm:text-lg md:text-xl text-[#262626] my-2 sm:my-3 md:my-4  cursor-pointer' onClick={() => { return handelArticle(news) }}>
                                     {news.title}
                                 </h5>
                                 <p className='text-[#696868] text-sm sm:text-base my-2 sm:my-3 md:my-4 line-clamp-2 sm:line-clamp-3'>
@@ -58,7 +69,13 @@ const Article = () => {
                         </div>
                     </div>
                 ))}
+
+                <NewsModal
+                    show={showModal}
+                    article={selectedArticle}
+                    onClose={() => setShowModal(!showModal)} />
             </div>
+            
             {/* <div className='flex justify-center md:justify-start mt-6 sm:mt-8'>
                 <div className='bg-[#262626] w-[50px] sm:w-[60px] md:w-[70px] h-[40px] sm:h-[45px] md:h-[50px] flex justify-center items-center rounded-sm cursor-pointer hover:bg-[#262626]/90 transition'>
                     <FaLongArrowAltLeft className='text-[#EBEEF3] w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6' />

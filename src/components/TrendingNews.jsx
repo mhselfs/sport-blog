@@ -4,11 +4,14 @@ import PostCart from './PostCart';
 import { useNavigate } from 'react-router-dom';
 // import newsData from "../data.js";
 import muckData from '../mouck.json'
+import NewsModal from './NewsModal';
 import rightSide from "../assets/trending-4.png"
 import axios from 'axios'
 
 const TrendingNews = () => {
     const navigate = useNavigate();
+    const [showModal, setShowModal] = useState(false)
+    const [selectedArticle, setSelectedArticle] = useState(null)
     // const [news, setNews] = useState([])
     // useEffect(() => {
     //     const fetchNews = async () => {
@@ -23,7 +26,15 @@ const TrendingNews = () => {
     //     };
     //     fetchNews();
     // }, [])
-    
+    const handelClick = (e, category) => {
+        e.preventDefault()
+        setSelectCategory(category)
+    }
+
+    const handelArticle = (article) => {
+        setSelectedArticle(article)
+        setShowModal(true)
+    }
 
     return (
         <div id='treading' className='flex flex-col lg:flex-row justify-center p-4 md:p-8 lg:m-8 xl:m-16 2xl:m-32'>
@@ -36,6 +47,7 @@ const TrendingNews = () => {
                     .slice(1, 4)
                     .map((news) => (
                         <div
+                            onClick={() => { return handelArticle(news) }}
                             dir='rtl'
                             key={news.title}
                             className='flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-5 my-4 md:my-5 cursor-pointer'
@@ -59,7 +71,10 @@ const TrendingNews = () => {
                         </div>
                     ))}
             </div>
-
+            <NewsModal
+                show={showModal}
+                article={selectedArticle}
+                onClose={() => setShowModal(!showModal)} />
             {/* Right Section */}
             <div
                 dir='rtl'

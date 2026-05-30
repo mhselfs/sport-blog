@@ -5,3 +5,15 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+@font-face {
+  font-family: vazirmtn;
+  font-style: normal;
+  font-weight: 200 700;
+  src: url("/fonts/Vazirmatn.ttf") format("truetype");
+}
+
+@theme {
+  --font-display: "vazirmtn", "sans-safir";
+  --font-display--font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  --font-display--font-variation-settings: "opsz" 32;
+}

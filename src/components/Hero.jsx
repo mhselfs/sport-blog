@@ -1,12 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import basket from "../assets/basketball-bg.png";
 import heroText from "../assets/hero-text.png";
 import basketplayer from "../assets/basketball-player.png";
 import newsData from "../data.js";
+import axios from 'axios'
+import PostCart from './PostCart';
+import NewsModal from './NewsModal';
+import muckData from '../mouck.json'
+import cartImg1 from "../assets/hero-cart-1.png";
+import cartImg2 from "../assets/hero-cart-2.png";
+
 
 const Hero = () => {
-    const filteredNews = newsData.filter(card => card.id === 1 || card.id === 2);
+    const filteredNews = [
+        {
+            id: 1,
+            image: cartImg1,
+            date: "Race98 - 03 June 2023",
+            title: "پیمان‌کاران اتیوپی در چهار جایگاه اول قرار گرفتند.",
+            description: "",
+            category: "ورزش‌های انتخابی",
+            introduction: "در یک نمایش نفس‌گیر از استقامت، سرعت و اراده، پیمان‌کاران اتیوپیا دوباره ثابت کردند که چرا از قوی‌ترین نیروها در دوهای طولانی‌مدت هستند. در یک مسابقه مهم اخیر، ورزشکاران اتیوپی چهار جایگاه اول را به دست آوردند و جامعه جهانی را با عملکرد فوق‌العاده خودشان تحت تأثیر قرار دادند. این دستاورد شگفت‌انگیز نه تنها میراث غنی دوایران را برجسته می‌کند، بلکه وضعیت آنها را به عنوان یک قدرت بزرگ در دنیای ورزش تثبیت می‌کند.",
+        },
+        {
+            id: 2,
+            image: cartImg2,
+            date: "NDYCAR - 03 June 2023",
+            title: "مسابقات IndyCar دیترویت: دیکسون سریع‌ترین زمان را در تمرین دوم به دست آورد",
+            description: "",
+            category: "رقابت",
+            introduction: "شهر موتورسیتی با هیجان در حال تپیدن است، زیرا سری NTT IndyCar در خیابان‌های دیترویت برای مسابقه بزرگ دیترویت گرم می‌شود. در یک جلسه تمرینی دوم هیجان‌انگیز، اسکات دیکسون، قهرمان شش‌گانه IndyCar، به دلیل اینکه یکی از بزرگترین رانندگان تاریخ این ورزش است، سریع‌ترین زمان را ثبت کرد و پیامی واضح به رقبا ارسال کرد. با افزایش گرمی مسابقات آخر هفته، عملکرد دیکسون صحنه را برای آنچه وعده می‌دهد یک رویداد هیجان‌انگیز می‌گذارد.",
+        }
+    ]
 
     return (
         <div
@@ -27,7 +53,7 @@ const Hero = () => {
                 '>به خواندن ادامه دهید</button>
             </div>
 
-            <div className='hidden lg:flex flex-col gap-4 mr-8 mt-[300px] ml-[100px]'>
+            <div dir='rtl' className='hidden lg:flex flex-col gap-4 mr-8 mt-[300px] ml-[100px]'>
                 {filteredNews.map((card) => (
                     <Link to={`/blog/${card.id}`} key={card.id}>
                         <div

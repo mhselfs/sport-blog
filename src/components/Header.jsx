@@ -13,7 +13,7 @@ const Header = () => {
                     <li className='text-[#2626269d]'> <a href="#category"> دسته‌بندی </a> </li>
                     <li className='text-[#2626269d]'> <a href="#treading"> خبرهای داغ </a> </li>
                     <li className='text-[#2626269d]'> <a href="#NewsLetter"> جدید‌ترین‌ها </a> </li>
-                    <li className='text-[#2626269d]'> <a href="#article"> اخبار ورزشی </a> </li>
+                    <li className='text-[#2626269d]'> <a href="#article"> اخبار  </a> </li>
                 </ul>
                 <h2 className="text-lg font-bold">Sport Snap</h2>
 
@@ -36,7 +36,7 @@ const Header = () => {
                     <li className='text-[#2626269d]'> <a href="#category"> دسته‌بندی </a> </li>
                     <li className='text-[#2626269d]'> <a href="#treading"> خبرهای داغ </a> </li>
                     <li className='text-[#2626269d]'> <a href="#NewsLetter"> جدید‌ترین‌ها </a> </li>
-                    <li className='text-[#2626269d]'> <a href="#article"> اخبار ورزشی </a> </li>
+                    <li className='text-[#2626269d]'> <a href="#article"> اخبار </a> </li>
                 </ul>
             )}
         </header>

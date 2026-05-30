@@ -9,23 +9,20 @@ const slides = [
     {
         image: slider1,
         date: "Agence France-Presse - 04 June 2023",
-        title: "Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms",
-        description: "The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals",
-        category: "Football",
+        title: "لیونل مسی ترک تیم لیگ 1 پاری سن ژرمن، باشگاه تایید می‌کند",
+        description: "بهترین گلزن در فینال یورو لیک جایزه انفرادی برای بازیکنی است که بیشترین امتیاز را در فینال یورو لیک کسب کرده است.",
     },
     {
         image: slider2,
-        date: "John Smith, October 10, 2023",
-        title: "Historic Basketball Match Ends in Nail-Biting Finish",
-        description: "The city witnessed an unforgettable basketball showdown as the local team clinched victory in the final seconds, leaving fans on the edge of their seats.",
-        category: "Basketball",
+        date: "جان اسمیت، 10 اکتبر 2023",
+        title: "پایان مسابقه بسکتبال تاریخی با نتیجه نزدیک",
+        description: "شهر شاهد یک درگیری بسکتبالی غیرقابل فراموشی بود که تیم محلی با پیروزی در ثانیه‌های پایانی، هواداران را به لبه صندلی‌های خود می‌کشاند.",
     },
     {
         image: slider3,
-        date: "Emily Davis, October 10, 2023",
-        title: "Epic Tennis Final Sets New Records",
-        description: "A thrilling five-set tennis final captivated audiences as the world No. 1 claimed victory in a match that will be remembered for years to come.",
-        category: "Tennis",
+        date: "امیلی دیویس، 10 اکتبر 2023",
+        title: "پایان مسابقه تنیس حماسی رکورد‌های جدید را جابجا می‌کند",
+        description: "یک مسابقه تنیس پنج ستاره مخاطبان را مجذوب خود کرد که شماره یک جهان در مسابقه‌ای به پیروزی رسید که به یاد ماندنی خواهد بود.",
     },
 ];
 
@@ -49,13 +46,8 @@ const BannerSlider = () => {
                 {/* Blur */}
                 <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px] sm:backdrop-blur-[1.5px]"></div>
 
-                {/* Category */}
-                <button className="absolute top-2 sm:top-3 md:top-4 left-2 sm:left-3 md:left-4 w-[80px] sm:w-[90px] md:w-[107px] h-[24px] sm:h-[30px] md:h-[36px] rounded-md text-xs sm:text-sm text-[#EBEEF3] font-semibold border-[#EBEEF3] border-[1px] z-20">
-                    {slides[currentSlide].category}
-                </button>
-
                 {/* Content */}
-                <div className='max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[700px] z-10 absolute bottom-2 sm:bottom-3 md:bottom-4 left-2 sm:left-3 md:left-4 p-2 sm:p-3'>
+                <div dir='rtl' className='max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[700px] z-10 absolute bottom-2 sm:bottom-3 md:bottom-4 right-2 sm:right-3 md:right-4 p-2 sm:p-3'>
                     <span className='text-[#F9FAFC] leading-[1.1] text-xs sm:text-sm md:text-base my-1 sm:my-2'>{slides[currentSlide].date}</span>
                     <h5 className='text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#F9FAFC] leading-tight sm:leading-snug md:leading-[1.2] my-1 sm:my-2'>
                         {slides[currentSlide].title}
